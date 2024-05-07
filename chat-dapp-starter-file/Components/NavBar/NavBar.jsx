@@ -6,6 +6,7 @@ import Style from "./NavBar.module.css";
 import { ChatAppContect } from "../../Context/ChatAppContext";
 import { Model, Error } from "../index";
 import images from "../../assets";
+import card from "../Friend/Card/Card"
 
 const NavBar = () => {
   const menuItems = [
@@ -21,18 +22,6 @@ const NavBar = () => {
       menu: "CONTACT",
       link: "/",
     },
-    {
-      menu: "SETTING",
-      link: "/",
-    },
-    {
-      menu: "FAQ",
-      link: "alluser",
-    },
-    {
-      menu: "TERMS OF USE",
-      link: "alluser",
-    },
   ];
   //USESTATE
   const [active, setActive] = useState(2);
@@ -44,7 +33,7 @@ const NavBar = () => {
     <div className={Style.NavBar}>
       <div className={Style.NavBar_box}>
         <div className={Style.NavBar_box_left}>
-          <Image src={images.logo} alt="logo" width={50} height={50} />
+          {/* <Image src={images.logo} alt="logo" width={50} height={50} /> */}
         </div>
         <div className={Style.NavBar_box_right}>
           {/* //Desktop */}
@@ -142,18 +131,13 @@ const NavBar = () => {
         <div className={Style.modelBox}>
           <Model 
             openBox={setOpenModel}
-            title="WELCOME TO"
-            head="CHAT BUDDY"
-            info='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-                  labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
-                  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-                  sunt in culpa qui officia deserunt mollit anim id est laborum.'
-            smaLLinfo="Kindly select your name..."
+            title="“Chat Freely, Chat Privately”"
+            
+            head="CHAT DAPP"  
             image={images.hero}
             functionName={createAccount}
             address={account}
-
+    
           />
 
         </div>

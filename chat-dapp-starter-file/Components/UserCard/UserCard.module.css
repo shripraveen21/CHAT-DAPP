@@ -1,9 +1,10 @@
 .UserCard{
-    background-color: rgba(0,0,0,0.25);
+    background-color: black;
     border-radius: .5rem;
     text-align: center;
     padding: 1rem;
     position: relative;
+    color: white;
 
 }
 
@@ -17,8 +18,8 @@
 
 }
 .UserCard_box_info button{
-    background-color: rgba(0,0,0,0.25);
-    color: #F18303;
+    background-color: white;
+    color: black;
     width: 50%;
     padding: 1rem;
     border: none;
@@ -33,7 +34,8 @@
     right: 1rem;
     padding: 1rem 1.3rem;
     border-radius: 50%;
-    background-color: #F18303;
+    background-color: white;
     top: 1rem;
+    color: black;
 
 }

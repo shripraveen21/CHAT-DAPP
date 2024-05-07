@@ -48,16 +48,14 @@ export const connectingWithContract = async () => {
 }
 
 export const convertTime = (time) => {
-    // Convert time to a JavaScript Date object if it's not already one
-    if (!(time instanceof Date)) {
-        time = new Date(time);
-    }
+    // Convert time from seconds to milliseconds
+    time = new Date(time * 1000);
 
     const realTime =
         time.getHours() +
-        "/" +
+        ":" +
         time.getMinutes() +
-        "/" +
+        ":" +
         time.getSeconds() +
         " Date:" +
         time.getDate() +
@@ -68,4 +66,3 @@ export const convertTime = (time) => {
 
     return realTime;
 }
-

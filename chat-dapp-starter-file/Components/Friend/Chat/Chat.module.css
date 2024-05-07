@@ -1,8 +1,9 @@
 .Chat{
     padding: 2rem;
-    background-color: rgba(0,0,0,0.25);
+    background-color: black;
     border-radius: .5rem;
     overflow-y: scroll;
+    color: white;
 
 }
 
@@ -18,7 +19,7 @@
 
 .Chat_box_right p,
 .Chat_box_left p{
-    background-color: #f182035b;
+    background-color: rgb(31, 52, 77)5b;
     padding: 1rem;
     border-top-right-radius: .5rem;
     border-top-left-radius: .5rem;
@@ -42,11 +43,11 @@
 }
 .Chat_box_send_img input{
     width: 100%;
-    background-color: #f182035b;
+    background-color: rgb(31, 52, 77)5b;
     outline: none;
     border: none;
     padding: 1rem;
-    color: #f18203;
+    color: white;
     border-radius: .5rem;
 
 }

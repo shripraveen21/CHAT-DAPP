@@ -27,11 +27,11 @@ const Model = ({
     <div className={Style.Model}>
       <div className={Style.Model_box}>
         <div className={Style.Model_box_left}>
-          <Image src={image} alt="buddy" width={700} height={700}/>
+          <Image src={image} alt="buddy" width={900} height={900} style={{borderRadius:"60px" , position:"relative",top:"100px"}}/>
         </div>
         <div className={Style.Model_box_right}>
           <h1>
-            {title} <span>{head}</span>
+            <span style={{fontStyle:"italic" }}>{title}</span>  &nbsp;&nbsp;<span  >{head}</span>
           </h1>
           <p>{info}</p>
           <small>{smaLLinfo}</small>
@@ -48,20 +48,20 @@ const Model = ({
                 onChange={(e) => setName(e.target.value)} 
                 />
             </div>
-            <div className={Style.Model_box_right_name_info}>
+            {/* <div className={Style.Model_box_right_name_info}>
               <Image src={images.account} alt="user" width={30} height={30} />
               <input
                 type="text"
                 placeholder={address || "Enter Address.."}  
                 onChange={(e) => setAccountAddress(e.target.value)} 
                 />
-            </div>
+            </div> */}
 
             <div className={Style.Model_box_right_name_btn}>
               <button onClick={()=>functionName({name,accountAddress})}
               >
                       {""}
-                      <Image src={images.send} alt="send" width={30} height={30} />
+                      <Image src={images.send_black} alt="send" width={30} height={30} />
                       {""}
                       Submit
                     </button>

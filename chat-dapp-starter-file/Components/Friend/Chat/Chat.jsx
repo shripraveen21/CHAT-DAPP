@@ -32,7 +32,7 @@ const Chat = ({
   },[router.isReady]);
 
   return (
-    <div className={Style.Chat}>
+    <div className={Style.Chat} style={{ border: '1px solid white' , boxShadow:'0 0 5px 0' }}>
       {currentUserName && currentUserAddress ? (
         <div className={Style.chat_user_info}>
           <Image src={images.accountName} alt="image" width={70}
@@ -43,17 +43,19 @@ const Chat = ({
             <br />
             <p className={Style.show}>
               {currentUserAddress}
+               <hr style={{position:'relative', top:'10px'}}/>
             </p>
+            
           </div>
-
+          
         </div>
       ): (
         ""
       )}
-
-      <div className={Style.Chat_box_box}>
-        <div className={Style.Chat_box}>
-          <div className={Style.Chat_box_let}>
+      <br />
+      <div className={Style.Chat_box_box} >
+        <div className={Style.Chat_box} >
+          <div className={Style.Chat_box_let} >
             {
               friendMsg.map((el,i)=>(
                 <div>
@@ -71,7 +73,7 @@ const Chat = ({
                       </span>
                     </div>
                   ):(
-                    <div className={Style.Chat_box_let_title}>
+                    <div className={Style.Chat_box_let_title} >
                       <Image src={images.accountName}
                       alt="image"
                       width={50}
@@ -85,11 +87,15 @@ const Chat = ({
                     </div>
 
                   ) }
-                  <p key={i+1}>
-                    {el.msg}
-                    {""}
-                    {""}
+                  <p key={i+1}  >
+                      {el.msg}
+                      {""}
+                      {""}
+                      <br />
+                      <br />
                   </p>
+                  <br />
+                
                 </div>
               ))}
           </div>
@@ -100,9 +106,9 @@ const Chat = ({
 
           <div className={Style.Chat_box_send}>
             <div className={Style.Chat_box_send_img}>
-              <Image src={images.smile} alt="smile" width={50} height={50} />
+              {/* <Image src={images.smile} alt="smile" width={50} height={50} /> */}
               <input type="text" placeholder="Type your message" onChange={(e)=>setMessage(e.target.value)} />
-              <Image src={images.file} alt="file" width={50} height={50}/>
+              {/* <Image src={images.file} alt="file" width={50} height={50}/> */}
               
                 {loading==true ? (
                   <Loader/>
