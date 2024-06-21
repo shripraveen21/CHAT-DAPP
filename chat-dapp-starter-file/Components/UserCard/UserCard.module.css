@@ -1,4 +1,4 @@
-.UserCard{
+/* .UserCard{
     background-color: black;
     border-radius: .5rem;
     text-align: center;
@@ -38,4 +38,105 @@
     top: 1rem;
     color: black;
 
-}
+} */
+.card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px; /* Narrower width for the primary card */
+    height: 200px; /* Increase height to make it more vertical */
+    border-radius: 24px;
+    line-height: 1.6;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+    margin: 16px; /* Add some margin to separate the cards */
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the content */
+    width: 200px;
+    gap: 24px;
+    padding: 24px;
+    border-radius: 22px;
+    color: #ffffff;
+    overflow: hidden;
+    background: #0a3cff;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+    text-align: center; /* Center align text */
+    height: 100%; /* Ensure content fills the card height */
+  }
+  
+  .content::before {
+    position: absolute;
+    content: "";
+    top: -4%;
+    left: 50%;
+    width: 90%;
+    height: 90%;
+    transform: translate(-50%);
+    background: #ced8ff;
+    z-index: -1;
+    transform-origin: bottom;
+    border-radius: 24px; /* Match primary card's border-radius */
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .content::after {
+    position: absolute;
+    content: "";
+    top: -8%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%);
+    background: #e7ecff;
+    z-index: -2;
+    transform-origin: bottom;
+    border-radius: 24px; /* Match primary card's border-radius */
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .content .para {
+    z-index: 1;
+    opacity: 1;
+    font-size: 18px;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .content .link {
+    z-index: 1;
+    color: #fea000;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 16px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .content .link:hover {
+    text-decoration: underline;
+  }
+  
+  .card:hover {
+    transform: translate(0px, -16px);
+  }
+  
+  .card:hover .content::before {
+    rotate: -8deg;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .card:hover .content::after {
+    rotate: 8deg;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  

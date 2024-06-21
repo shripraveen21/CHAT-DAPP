@@ -7,6 +7,7 @@
     border-bottom: 1px solid #ffff;
     cursor: pointer;
     color: #ffff;
+    background-color:#ffff;
 
 }
 
@@ -16,4 +17,5 @@
 }
 .Card_box_left{
     border-radius: 50%;
+    background-color: #ffff;
 }

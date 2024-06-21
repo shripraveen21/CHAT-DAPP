@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 
 //INTERNAL IMPORT
 
